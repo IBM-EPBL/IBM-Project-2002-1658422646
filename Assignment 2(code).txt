@@ -1,0 +1,15 @@
+import random
+import time
+High_ambient_temp=75
+High_ambient_humidity=5.5
+start = time.time()
+while 1:
+    Temp = random.random()*100
+    Humidity = random.random()*100
+    print('Temp={0:0.1f}*F Humidity={1:0.1f}%'.format(Temp, Humidity))
+    if Temp>High_ambient_temp:
+      print('ALARM ON')
+    time.sleep(1)
+    end = time.time()
+    if  end-start >120:
+        break
